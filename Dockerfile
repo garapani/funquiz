@@ -3,7 +3,7 @@ FROM node:10-alpine
 COPY package.json package-lock.json ./
 
 ## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
-RUN npm i --production && mkdir /funquiz && mv ./node_modules ./funquiz
+RUN npm i && mkdir /funquiz && mv ./node_modules ./funquiz
 
 WORKDIR /funquiz
 

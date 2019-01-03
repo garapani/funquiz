@@ -25,4 +25,5 @@ services:
         window: 120s
     networks:
       - webnet
-  
+networks:
+  webnet:
