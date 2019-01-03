@@ -1,0 +1,79 @@
+<div class='share__quiz__div'>
+  <div *ngIf="noOneAnswered === true" class="share__quiz__div_child">
+    <h3 class="quiz__ready__text">your fun quiz is ready.</h3>
+    <div class="quiz__share__text">
+      <h4 class="quiz__share__text__header">Now share your quiz with your friends and let the fun get started</h4>
+      <h5 class="quiz__share__text__sub__header">You friends will try to guess the answers for your questions and gets
+        a score</h5>
+    </div>
+    <div class="share__details__div">
+      <input type="text" id='quiz__url__input' class="form-input quiz__url__input" contenteditable="true" value="{{quizUrl}}">
+      <div class="share__div__copy">
+        <span class="tooltiptext" id="tooltipId">Copy Link</span>
+        <button id="share_button" class="btn share__button__div" type="button" (click)="onCopyLink()">
+          Copy Link
+        </button>
+      </div>
+      <div class="share__on__social__media__div">
+        <button class="share__button__div" (click)="onShareOnWhatsapp()">
+          <img src="../../../assets//images//whatsapp.png" class="img-responsive logo__img" />
+        </button>
+        <button class="share__button__div" (click)="onShareOnFacebook()">
+          <img src="../../../assets//images//facebook.png" class="img-responsive logo__img" />
+        </button>
+        <button class="share__button__div" (click)="onShareOnMessenger()">
+          <img src="../../../assets//images//messenger.png" class="img-responsive logo__img" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="noOneAnswered === false" class="share__quiz__div_child">
+    <div class="score__div">
+      <h3>Who knows best about you?</h3>
+      <div class="score__table__div">
+        <table style="width:100%">
+          <th style="text-align:center">Friend Name</th>
+          <th style="text-align:center">Score</th>
+          <th style="text-align:center" [hidden]="canHideDelete">Delete</th>
+          <tr *ngFor="let result of friendsResults">
+            <td>{{ result.name }}</td>
+            <td style="text-align:center">{{ result.score }}</td>
+            <td style="text-align:center" [hidden]="canHideDelete">
+              <a (click)="onDelete(result)">
+                <span class="glyphicon glyphicon-trash">
+                </span>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="share__div">
+      <h3 class="quiz__ready__text">your fun quiz is ready.</h3>
+      <div class="quiz__share__text">
+        <h4 class="quiz__share__text__header">Now share your quiz with your friends and let the fun get started.</h4>
+        <h5 class="quiz__share__text__sub__header">You friends will try to guess the answers for your questions and
+          gets a score.</h5>
+      </div>
+      <div class="share__details__div">
+        <input type="text" id="quiz__url__input" class="form-input quiz__url__input" readonly="readonly" [(ngModel)]="quizUrl" />
+        <div class="share__div__copy">
+          <span class="tooltiptext" id="tooltipId">Copy Link</span>
+          <button id="share_button" class="btn share__button__div" type="button" (click)="onCopyLink()">
+            Copy Link
+          </button>
+        </div>
+        <div class="share__on__social__media__div">
+          <button class="share__button__div" (click)="onShareOnWhatsapp()">
+            <img src="../../../assets//images//whatsapp.png" class="img-responsive logo__img" />
+          </button>
+          <button class="share__button__div" (click)="onShareOnFacebook()">
+            <img src="../../../assets//images//facebook.png" class="img-responsive logo__img" />
+          </button>
+          <button class="share__button__div" (click)="onShareOnMessenger()">
+            <img src="../../../assets//images//messenger.png" class="img-responsive logo__img" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

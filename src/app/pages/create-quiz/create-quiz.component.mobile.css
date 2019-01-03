@@ -1,0 +1,39 @@
+@media only screen and (max-width: 600px) {
+  .createQuiz__div {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    margin: 3% 2%;
+    background-color: #fafafa;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .createQuiz__div {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    margin: 3% 2%;
+    background-color: #fafafa;
+  }
+
+  .option__div {
+    width: 130px;
+    justify-content: center;
+    align-content: center;
+    max-height: 180px;
+    padding: 2px;
+  }
+
+  .option__img {
+    width: 126px;
+    height: 130px;
+  }
+
+  .option__string__div {
+    width: 146px;
+    text-align: center;
+  }
+}

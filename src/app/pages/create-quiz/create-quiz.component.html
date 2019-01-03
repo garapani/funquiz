@@ -1,0 +1,38 @@
+<div class="createQuiz__div">
+  <h3 class="title">Choose your questions</h3>
+  <button type="button" class="btn btn-small" (click)="onChangeQuestion()">change question</button>
+  <div class="question__progress__div">
+    <ul>
+      <li *ngFor="let q of questionsList; let i = index">
+        <div *ngIf="i < noOfSelectedQuestions" class="selected_question">
+          <h4 class="question_number">{{i+1}}</h4>
+        </div>
+        <div *ngIf="i >= noOfSelectedQuestions" class="non_select_question">
+          <h4 class="question_number">{{i+1}}</h4>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <h3 *ngIf="selectedQuestion != null">{{selectedQuestion.questionName}}</h3>
+  <div class="options__div" *ngIf="selectedQuestion != null && selectedQuestion.options != null">
+    <div *ngFor="let option of selectedQuestion.options">
+      <div *ngIf="option != null">
+        <div *ngIf="isImageContent; else string_content">
+          <div class="content__div" (click)="onOptionSelected(option.questionOptionId)">
+            <div class="option__div">
+              <img class="option__img" src={{option.image}} />
+              <h4 class="option__string__div">{{option.content}}</h4>
+            </div>
+          </div>
+        </div>
+        <ng-template #string_content>
+          <div class="content__div" (click)="onOptionSelected(option.questionOptionId)">
+            <div class="option__string__div">
+              <h4>{{option.content}}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

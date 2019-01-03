@@ -1,0 +1,23 @@
+<div class="scores__div">
+  <h3>Fun Quiz results for {{quizName}}</h3>
+  <div class="score__table__div">
+    <!-- <table style="width:100%">
+      <th>Friend Name</th>
+      <th>Score</th>
+      <tr *ngFor="let result of friendsResults">
+        <td>{{ result.name }}</td>
+        <td>{{ result.score }}</td>
+      </tr>
+    </table> -->
+    <table style="width:100%">
+      <th style="text-align:center">Friend Name</th>
+      <th style="text-align:center">Score</th>
+      <tr *ngFor="let result of friendsResults">
+        <td>{{ result.name }}</td>
+        <td style="text-align:center">{{ result.score }}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="share__info">Now, it’s your turn. Create your own fun quiz and send to your friends!</div>
+  <button type="button" class="btn" (click)="onCreateQuiz()">Create your fun quiz</button>
+</div>

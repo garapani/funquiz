@@ -1,0 +1,477 @@
+{
+    "id": "1",
+    "name": "First Quiz",
+    "questions": [{
+            "questionId": "1",
+            "questionName": "Which is your B’day month?",
+            "optionsType": "s",
+            "options": [{
+                    "questionOptionId": "1_1",
+                    "content": "January",
+                    "$$hashKey": "003"
+                },
+                {
+                    "questionOptionId": "1_2",
+                    "content": "February",
+                    "$$hashKey": "004"
+                },
+                {
+                    "questionOptionId": "1_3",
+                    "content": "March",
+                    "$$hashKey": "005"
+                },
+                {
+                    "questionOptionId": "1_4",
+                    "content": "April",
+                    "$$hashKey": "006"
+                },
+                {
+                    "questionOptionId": "1_5",
+                    "content": "May",
+                    "$$hashKey": "007"
+                },
+                {
+                    "questionOptionId": "1_6",
+                    "content": "June",
+                    "$$hashKey": "008"
+                },
+                {
+                    "questionOptionId": "1_7",
+                    "content": "July",
+                    "$$hashKey": "009"
+                },
+                {
+                    "questionOptionId": "1_8",
+                    "content": "August",
+                    "$$hashKey": "00A"
+                },
+                {
+                    "questionOptionId": "1_9",
+                    "content": "September",
+                    "$$hashKey": "00B"
+                },
+                {
+                    "questionOptionId": "1_10",
+                    "content": "October",
+                    "$$hashKey": "00C"
+                },
+                {
+                    "questionOptionId": "1_11",
+                    "content": "November",
+                    "$$hashKey": "00D"
+                },
+                {
+                    "questionOptionId": "1_12",
+                    "content": "December",
+                    "$$hashKey": "00E"
+                }
+            ],
+            "inDirectQuestion": "Which is {USERNAME}'s B’day month?"
+        },
+        {
+            "questionId": "2",
+            "questionName": "Who is your favourite cricketer?",
+            "optionsType": "i_s",
+            "options": [{
+                    "questionOptionId": "2_1",
+                    "image": "/assets/images/Q2/sachin.jpg",
+                    "content": "Sachin Tendulkar"
+                },
+                {
+                    "questionOptionId": "2_2",
+                    "image": "/assets/images/Q2/dravid.jpg",
+                    "content": "Rahul Dravid"
+                },
+                {
+                    "questionOptionId": "2_3",
+                    "image": "/assets/images/Q2/ganguly.jpg",
+                    "content": "Sourav Ganguly"
+                },
+                {
+                    "questionOptionId": "2_4",
+                    "image": "/assets/images/Q2/dhoni.jpg",
+                    "content": "Dhoni"
+                },
+                {
+                    "questionOptionId": "2_5",
+                    "image": "/assets/images/Q2/sehwag.jpg",
+                    "content": "Virendra Sehwag"
+                },
+                {
+                    "questionOptionId": "2_6",
+                    "image": "/assets/images/Q2/kohli.jpg",
+                    "content": "Virat Kohli"
+                },
+                {
+                    "questionOptionId": "2_7",
+                    "image": "/assets/images/Q2/zaheer.jpg",
+                    "content": "Zaheer Khan"
+                },
+                {
+                    "questionOptionId": "2_8",
+                    "image": "/assets/images/Q2/rohit.jpg",
+                    "content": "Rohit Sarma"
+                },
+                {
+                    "questionOptionId": "2_9",
+                    "image": "/assets/images/Q2/kumble.jpg",
+                    "content": "Anil Kumble"
+                }
+            ],
+            "inDirectQuestion": "Who is {USERNAME}’s favourite cricketer?"
+        },
+        {
+            "questionId": "3",
+            "questionName": "What do you use the most?",
+            "optionsType": "i_s",
+            "options": [{
+                    "questionOptionId": "3_1",
+                    "image": "/assets/images/Q3/facebook.jpg",
+                    "content": "Facebook"
+                },
+                {
+                    "questionOptionId": "3_2",
+                    "image": "/assets/images/Q3/whatsapp.jpg",
+                    "content": "Whatsapp"
+                },
+                {
+                    "questionOptionId": "3_3",
+                    "image": "/assets/images/Q3/youtube.jpg",
+                    "content": "Youtube"
+                },
+                {
+                    "questionOptionId": "3_4",
+                    "image": "/assets/images/Q3/twitter.jpg",
+                    "content": "Twitter"
+                },
+                {
+                    "questionOptionId": "3_5",
+                    "image": "/assets/images/Q3/snapchat.jpg",
+                    "content": "snapchat"
+                },
+                {
+                    "questionOptionId": "3_6",
+                    "image": "/assets/images/Q3/tinder.jpg",
+                    "content": "Tinder"
+                },
+                {
+                    "questionOptionId": "3_7",
+                    "image": "/assets/images/Q3/instagram.jpg",
+                    "content": "Instagram"
+                }
+            ],
+            "inDirectQuestion": "What does {USERNAME} use the most?"
+        },
+        {
+            "questionId": "4",
+            "questionName": "What is your favourite colour?",
+            "optionsType": "i_s",
+            "options": [{
+                    "questionOptionId": "4_1",
+                    "image": "/assets/images/Q4/red.jpg",
+                    "content": "Red"
+                },
+                {
+                    "questionOptionId": "4_2",
+                    "image": "/assets/images/Q4/blue.jpg",
+                    "content": "Blue"
+                },
+                {
+                    "questionOptionId": "4_3",
+                    "image": "/assets/images/Q4/pink.jpg",
+                    "content": "Pink"
+                },
+                {
+                    "questionOptionId": "4_4",
+                    "image": "/assets/images/Q4/yellow.jpg",
+                    "content": "yellow"
+                },
+                {
+                    "questionOptionId": "4_5",
+                    "image": "/assets/images/Q4/black.jpg",
+                    "content": "Black"
+                },
+                {
+                    "questionOptionId": "4_6",
+                    "image": "/assets/images/Q4/green.jpg",
+                    "content": "Green"
+                },
+                {
+                    "questionOptionId": "4_7",
+                    "image": "/assets/images/Q4/white.jpg",
+                    "content": "White"
+                },
+                {
+                    "questionOptionId": "4_8",
+                    "image": "/assets/images/Q4/purple.jpg",
+                    "content": "Purple"
+                },
+                {
+                    "questionOptionId": "4_9",
+                    "image": "/assets/images/Q4/orange.jpg",
+                    "content": "Orange"
+                }
+            ],
+            "inDirectQuestion": "What is {USERNAME}’s favourite colour?"
+        },
+        {
+            "questionId": "5",
+            "questionName": "What is your dream car?",
+            "optionsType": "i_s",
+            "options": [{
+                    "questionOptionId": "5_1",
+                    "image": "/assets/images/Q5/audi.jpg",
+                    "content": "Audi"
+                },
+                {
+                    "questionOptionId": "5_2",
+                    "image": "/assets/images/Q5/jaquar.jpg",
+                    "content": "Jaguar"
+                },
+                {
+                    "questionOptionId": "5_3",
+                    "image": "/assets/images/Q5/lamborghini.jpg",
+                    "content": "Lamborghini"
+                },
+                {
+                    "questionOptionId": "5_4",
+                    "image": "/assets/images/Q5/porsche.jpg",
+                    "content": "Porsche"
+                },
+                {
+                    "questionOptionId": "5_5",
+                    "image": "/assets/images/Q5/bmw.jpg",
+                    "content": "BMW"
+                },
+                {
+                    "questionOptionId": "5_6",
+                    "image": "/assets/images/Q5/benz.jpg",
+                    "content": "Mercedes Benz"
+                },
+                {
+                    "questionOptionId": "5_7",
+                    "image": "/assets/images/Q5/range-rover.jpg",
+                    "content": "Range Rover"
+                },
+                {
+                    "questionOptionId": "5_8",
+                    "image": "/assets/images/Q5/rolls-royce.jpg",
+                    "content": "Rolls-Royce"
+                },
+                {
+                    "questionOptionId": "5_9",
+                    "image": "/assets/images/Q5/bentley.jpg",
+                    "content": "Bentley"
+                },
+                {
+                    "questionOptionId": "5_10",
+                    "image": "/assets/images/Q5/ferrari.jpg",
+                    "content": "Ferrari"
+                }
+            ],
+            "inDirectQuestion": "What is {USERNAME}’s dream car?"
+        },
+        {
+            "questionId": "6",
+            "questionName": "What is more important to you?",
+            "optionsType": "s",
+            "options": [{
+                    "questionOptionId": "6_1",
+                    "content": "Money"
+                },
+                {
+                    "questionOptionId": "6_2",
+                    "content": "Love"
+                },
+                {
+                    "questionOptionId": "6_3",
+                    "content": "Friends & Family"
+                },
+                {
+                    "questionOptionId": "6_4",
+                    "content": "Career"
+                }
+            ],
+            "inDirectQuestion": "What is more important to {USERNAME}?"
+        },
+        {
+            "questionId": "7",
+            "questionName": "What do you prefer?",
+            "optionsType": "s",
+            "options": [{
+                    "questionOptionId": "7_1",
+                    "content": "Love Marriage"
+                },
+                {
+                    "questionOptionId": "7_2",
+                    "content": "Arranged Marriage"
+                },
+                {
+                    "questionOptionId": "7_3",
+                    "content": "I don't want Marriage"
+                }
+            ],
+            "inDirectQuestion": "What would {USERNAME} prefer?"
+        },
+        {
+            "questionId": "8",
+            "questionName": "What would you choose?",
+            "optionsType": "s",
+            "options": [{
+                    "questionOptionId": "8_1",
+                    "content": "Peaceful Life"
+                },
+                {
+                    "questionOptionId": "8_2",
+                    "content": "Rs 10 Crore"
+                },
+                {
+                    "questionOptionId": "8_3",
+                    "content": "2 Most Expensive Cars"
+                },
+                {
+                    "questionOptionId": "8_4",
+                    "content": "Bungalow At Your Dream Place"
+                },
+                {
+                    "questionOptionId": "8_5",
+                    "content": "Loyal Life Partner"
+                },
+                {
+                    "questionOptionId": "8_6",
+                    "content": "Adventurous Life"
+                }
+            ],
+            "inDirectQuestion": "What would {USERNAME} choose?"
+        },
+        {
+            "questionId": "9",
+            "questionName": "Which supernatural power do you desire?",
+            "optionsType": "s",
+            "options": [{
+                    "questionOptionId": "9_1",
+                    "content": "Fly like Shaktiman"
+                },
+                {
+                    "questionOptionId": "9_2",
+                    "content": "Be invisible like Mr. India"
+                },
+                {
+                    "questionOptionId": "9_3",
+                    "content": "Can See Ghosts"
+                },
+                {
+                    "questionOptionId": "9_4",
+                    "content": "Read minds of the people"
+                },
+                {
+                    "questionOptionId": "9_5",
+                    "content": "Control someone’s mind"
+                },
+                {
+                    "questionOptionId": "9_6",
+                    "content": "Teleportation"
+                }
+            ],
+            "inDirectQuestion": "Which supernatural power does {USERNAME} desire?"
+        },
+        {
+            "questionId": "10",
+            "questionName": "How many kids do you want?",
+            "optionsType": "s",
+            "options": [{
+                    "questionOptionId": "10_1",
+                    "content": "None"
+                },
+                {
+                    "questionOptionId": "10_2",
+                    "content": "One"
+                },
+                {
+                    "questionOptionId": "10_3",
+                    "content": "Two"
+                },
+                {
+                    "questionOptionId": "10_4",
+                    "content": "Three"
+                },
+                {
+                    "questionOptionId": "10_5",
+                    "content": "Four"
+                },
+                {
+                    "questionOptionId": "10_6",
+                    "content": "I want to adopt kids"
+                }
+            ],
+            "inDirectQuestion": "How many kids does {USERNAME} want?"
+        },
+        {
+            "questionId": "11",
+            "questionName": "How many pegs do you need to get drunk?",
+            "optionsType": "s",
+            "options": [{
+                    "questionOptionId": "11_1",
+                    "content": "One"
+                },
+                {
+                    "questionOptionId": "11_2",
+                    "content": "Two"
+                },
+                {
+                    "questionOptionId": "11_3",
+                    "content": "Three"
+                },
+                {
+                    "questionOptionId": "11_4",
+                    "content": "Four"
+                },
+                {
+                    "questionOptionId": "11_5",
+                    "content": "Five"
+                },
+                {
+                    "questionOptionId": "11_6",
+                    "content": "Six"
+                },
+                {
+                    "questionOptionId": "11_7",
+                    "content": "More than 7"
+                }
+            ],
+            "inDirectQuestion": "How many pegs does {USERNAME} need to get drunk?"
+        },
+        {
+            "questionId": "12",
+            "questionName": "How many relationships did you have?",
+            "optionsType": "s",
+            "options": [{
+                    "questionOptionId": "12_1",
+                    "content": "One"
+                },
+                {
+                    "questionOptionId": "12_2",
+                    "content": "Two"
+                },
+                {
+                    "questionOptionId": "12_3",
+                    "content": "Three"
+                },
+                {
+                    "questionOptionId": "12_4",
+                    "content": "Four"
+                },
+                {
+                    "questionOptionId": "12_5",
+                    "content": "More than 4"
+                },
+                {
+                    "questionOptionId": "12_6",
+                    "content": "None"
+                }
+            ],
+            "inDirectQuestion": "How many relationships did {USERNAME} have?"
+        }
+    ],
+    "maxQuestion": 10
+}

@@ -1,0 +1,39 @@
+<div class="container__div">
+  <div class="ad_unit_1">
+      <ng-adsense [adClient]="'ca-pub-6109385373902645'" [adSlot]="8803897028" [display]="'inline-block'"></ng-adsense>
+  </div>
+  <div class="start__div" *ngIf="!isQuizStarted">
+    <img class="start__div__image" src="assets/images/background.png" alt="" class="img-responsive">
+    <button type="button" class="btn icon-arrow-right" (click)="onStart()">Start</button>
+  </div>
+  <div class="userdetails__div" *ngIf="isQuizStarted">
+    <h3>Create your fun quiz</h3>
+    <form class="userdetails__form">
+      <h3>Please enter your name</h3>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <div *ngIf="name.errors.minlength">
+          Name must be at least 3 characters.
+        </div>
+      </div>
+      <input type="text" id="name" name="name" class="form-control userName" autocomplete="off" [(ngModel)]="userName"
+        #name="ngModel" required minlength="3" placeholder="Enter your name" />
+      <button type="button" class="btn create__quiz__button" [disabled]="userName === 'null' || userName === undefined || userName.length <3 || userName.length >20"
+        (click)="onCreateQuiz()">Create Quiz</button>
+    </form>
+    <div class="instructions__div">
+      <b>
+        <h3>Instructions:</h3>
+      </b>
+      <ul>
+        <li>Enter Your Name</li>
+        <li>Answer any 10 Questions about yourself.</li>
+        <li>Share your quiz-link with your friends.</li>
+        <li>Your friends will try to guess the right answers.</li>
+        <li>Check the score of your friends at your quiz-link!</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ad_unit_2">
+    <ng-adsense [adClient]="'ca-pub-6109385373902645'" [adSlot]="8495941117" [display]="'block'"></ng-adsense>
+  </div>
+</div>

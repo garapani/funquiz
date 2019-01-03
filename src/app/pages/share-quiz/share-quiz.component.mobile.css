@@ -1,0 +1,96 @@
+@media only screen and (max-width: 800px) {
+  .share__quiz__div {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    margin: 3% 3%;
+    background-color: #fafafa;
+    border: solid;
+    background-color: white;
+    border-color: pink;
+    border-width: 0.5px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+  }
+
+  .share__quiz__div_child {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    margin: 3% 30%;
+    background-color: #fafafa;
+    background-color: white;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .share__quiz__div {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    margin: 3% 3%;
+    background-color: #fafafa;
+    border: solid;
+    background-color: white;
+    border-color: pink;
+    border-width: 0.5px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+  }
+
+  .share__quiz__div_child {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column;
+    width:100%;
+    align-items: center;
+    margin: 3% 30%;
+    background-color: #fafafa;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .share__whatsapp__div {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .share__quiz__div {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    margin: 3% 3%;
+    background-color: #fafafa;
+    border: solid;
+    background-color: white;
+    border-color: pink;
+    border-width: 0.5px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+  }
+
+  .share__quiz__div_child {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    margin: 3% 30%;
+    background-color: #fafafa;
+    background-color: white;
+    padding: 10px;
+  }
+}

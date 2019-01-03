@@ -1,0 +1,129 @@
+.createQuiz__div {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  margin: 3% 30%;
+  background-color: #fafafa;
+  border: solid;
+  background-color: white;
+  border-color: pink;
+  border-width: 0.5px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.question_number {
+  margin: 0px;
+}
+
+.selected_question {
+  background-color: lightblue;
+  padding: 5px;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.non_select_question {
+  background-color: lightgray;
+  padding: 5px;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.question__progress__div {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  background-color: lightgray;
+  align-items: center;
+  justify-content: center;
+  border-color: pink;
+  border-width: 0.5px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+}
+
+.content__div {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  border-color: pink;
+  border-width: 3px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+  .content__div:hover {
+    cursor: pointer;
+    background-color: lightblue;
+    border-width: 2px;
+    border-color: lightblue;
+  }
+
+.no-touchevents content__div:hover {
+  cursor: pointer;
+  background-color: lightblue;
+  border-width: 2px;
+  border-color: lightblue;
+}
+
+.options__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: auto;
+}
+
+.option__div {
+  width: 150px;
+  justify-content: center;
+  align-content: center;
+  max-height: 200px;
+  padding: 2px;
+  border-color: pink;
+  border-width: 0.5px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+}
+
+.option__img {
+  width: 146px;
+  height: 150px;
+}
+
+  .option__img:hover {
+    border: 2px;
+    border-color: lightblue;
+  }
+
+.option__string__div {
+  width: 146px;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+input {
+  max-width: 250px;
+}

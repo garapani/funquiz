@@ -1,0 +1,219 @@
+.share__quiz__div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  align-items: center;
+  margin: 3% 30%;
+  background-color: #fafafa;
+  border: solid;
+  background-color: white;
+  border-color: pink;
+  border-width: 0.5px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+}
+
+.share__quiz__div_child {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  margin: 3% 30%;
+  background-color: #fafafa;
+  background-color: white;
+  padding: 10px;
+}
+
+.score__div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #fafafa;
+  border: solid;
+  background-color: white;
+  border-color: pink;
+  border-width: 0.5px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+}
+
+.share__div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #fafafa;
+  border: solid;
+  background-color: white;
+  border-color: pink;
+  border-width: 0.5px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
+}
+
+.share__details__div {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.score__table__div {
+  width: 100%;
+}
+
+.quiz__ready__text {
+  text-align: center;
+  text-transform: uppercase;
+  color: darkorange;
+}
+
+.quiz__url__input {
+  margin: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-self: center;
+  border-color: whitesmoke;
+  border-radius: 10px;
+  border-style: dotted;
+  box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 10px 0px;
+  text-align: center;
+}
+
+.quiz__share__text {
+  text-align: center;
+  margin: 5px;
+}
+
+.quiz__share__text__header {
+  margin: 5px;
+}
+
+.quiz__share__text__header {
+  margin: 5px;
+}
+
+.share__div__copy {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+
+.share__div__copy .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.share__div__copy .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.share__div__copy:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.share__button__div {
+  text-transform: uppercase;
+  vertical-align: baseline;
+  font-weight: 200;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  color: white;
+  height: 50px;
+  justify-content: center;
+  align-content: center;
+  border-color: transparent;
+  padding: 10px;
+}
+
+.share__button__div:hover {
+  cursor: pointer;
+}
+
+.share__on__social__media__div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.share__button__div:hover {
+  cursor: pointer;
+}
+
+.quiz__url__input {
+  width: 100%;
+}
+
+.logo__img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 3px;
+  margin-top: -4px;
+}
+
+.share__button__div__string {
+  text-align: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.tooltipText {
+  text-align: center;
+}
