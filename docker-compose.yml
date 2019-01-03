@@ -1,18 +1,28 @@
 version: '3'
-
 services:
-  app:
-    build: ./
+  database:
+    image: mongo
+    ports: 
+      - "27017:27017"
+    networks:
+      - webnet
+  funquiz:
     image: funquiz
-    expose:
-      - 80
+    ports:
+      - "80:4000"
     environment:
       NODE_ENV: production
       SERVER_PORT: 80
       MONGO_HOST: mongodb://database/funquiz
-    restart: always
-    depends_on:
-      - mongo
-
-  mongo:
-    image: mongo:3.6
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+        window: 120s
+    networks:
+      - webnet
+  

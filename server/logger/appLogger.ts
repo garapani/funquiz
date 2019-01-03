@@ -23,14 +23,17 @@ export class AppLogger {
       case LogLevel.debug:
         this.logger.level = 'debug';
         this.logger.debug(args);
+        console.log(args);
         break;
       case LogLevel.error:
         this.logger.level = 'error';
         this.logger.error(args);
+        console.log(args);
         break;
       case LogLevel.warn:
         this.logger.level = 'warn';
         this.logger.warn(args);
+        console.log(args);
         break;
     }
   }

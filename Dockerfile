@@ -1,11 +1,13 @@
-FROM node:8
+# We label our stage as ‘builder’
+FROM node:10-alpine
+COPY package.json package-lock.json ./
 
-WORKDIR /usr/src/app
-ADD . /usr/src/app
+## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
+RUN npm i --production && mkdir /funquiz && mv ./node_modules ./funquiz
 
-RUN yarn
-RUN yarn build
+WORKDIR /funquiz
 
-EXPOSE 4040
-
-CMD ["yarn", "serve"]
+COPY . .
+EXPOSE 4000
+RUN npm run build-prod
+CMD ["npm", "serve"]

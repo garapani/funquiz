@@ -12,7 +12,7 @@ class Enviroment {
   }
 
   public isProdEnvironment(): boolean {
-    if (process.env.NODE_DEV === 'production') { return true; } else { return false; }
+    if (process.env.NODE_ENV === 'production') { return true; } else { return false; }
   }
 
 }
