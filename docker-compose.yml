@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   database:
     image: mongo
@@ -19,7 +20,8 @@ services:
         condition: on-failure
         max_attempts: 3
         window: 120s
-      networks:
-        - webnet
+    networks:
+      - webnet
+
 networks:
   webnet:
