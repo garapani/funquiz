@@ -10,6 +10,7 @@ class MongoDBUtil {
     } else {
       connectionString = constants.MONGO_DB_DEV_CONNECTION_STRING;
     }
+    connectionString = constants.MONGO_DB_PROD_CONNECTION_STRING;
     const result: Mongoose = await connect(
       connectionString,
       {

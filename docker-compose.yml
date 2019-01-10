@@ -7,13 +7,9 @@ services:
     networks:
       - webnet
   funquiz:
-    image: funquiz
+    image: vgarapani/funquiz_server
     ports:
       - "80:4000"
-    environment:
-      NODE_ENV: production
-      SERVER_PORT: 80
-      MONGO_HOST: mongodb://database/funquiz
     deploy:
       replicas: 2
       update_config:
@@ -23,7 +19,7 @@ services:
         condition: on-failure
         max_attempts: 3
         window: 120s
-    networks:
-      - webnet
+      networks:
+        - webnet
 networks:
   webnet:
