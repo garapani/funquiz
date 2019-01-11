@@ -40,7 +40,7 @@ export default class Consts {
   public static ScoresPagePath = 'scoresPage';
 
   private static GetServerUrl(): string {
-    return 'http://funquiz.in';
+    return 'https://funquiz.in';
     if (environment.production) {
       return 'http://funquiz.in';
     } else {
@@ -49,7 +49,7 @@ export default class Consts {
   }
 
   private static GetHostUrl(): string {
-    return 'http://funquiz.in';
+    return 'https://funquiz.in';
     if (environment.production) {
       return 'http://funquiz.in';
     } else {

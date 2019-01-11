@@ -10,7 +10,7 @@ WORKDIR /funquiz-app
 RUN echo 'copying remaining files'
 COPY . .
 RUN echo 'exposing 4000 port'
-EXPOSE 4000
+EXPOSE 8080
 
 RUN echo 'compiling angular project'
 ## Build the angular app in production mode and store the artifacts in dist folder

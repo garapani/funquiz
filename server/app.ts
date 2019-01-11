@@ -10,6 +10,7 @@ import cookieParser = require('cookie-parser');
 import compress = require('compression');
 import methodOverride = require('method-override');
 import helmet = require('helmet');
+import * as forceSSL from 'express-force-ssl';
 
 class App {
   private app: express.Application;
@@ -56,6 +57,7 @@ class App {
     // support application/x-www-form-urlencoded post data
     this.app.use(urlencoded({ extended: true }));
     this.app.use(cookieParser());
+    this.app.use(forceSSL);
     this.app.use(compress());
     this.app.use(methodOverride());
     this.app.use(helmet());
