@@ -1,19 +1,29 @@
 <div class="root__container">
   <!-- header -->
   <header class="main__header">
-    <img class='main__header__logo' src="assets/images/logo.png" />
-    <h3 class="title__text">Fun Quiz</h3>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <a href="/homePage">
+      <img class='main__header__logo' src=" assets/images/logo.png" />
+      <h3 class="title__text">Fun Quiz</h3>
+    </a>
   </header>
 
   <!-- container -->
   <main class="main__container">
     <router-outlet></router-outlet>
   </main>
-
-  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <div class="footer_menu">
+        <ul>
+          <li><a href="/aboutus">About Us</a></li>
+          <li><a href="https://holaquiz.com/privacy-policy">Privacy Policy </a></li>
+          <li><a href="https://holaquiz.com/terms-of-use">Terms Of Use </a></li>
+          <li><a href="https://holaquiz.com/faq">FAQs </a></li>
+        </ul>
+        <p><b>Disclaimer:</b> All content is provided for fun and entertainment purposes only</p>
+        <p> © 2019 The Village Software All rights Reserved</p>
+      </div>
+    </div>
+  </footer>
 
 </div>

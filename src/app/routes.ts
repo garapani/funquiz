@@ -7,7 +7,7 @@ import { AnswerQuizComponent } from './pages/answer-quiz/answer-quiz.component';
 import { FriendPageComponent } from './pages/friend-page/friend-page.component';
 import { ScorePageComponent } from './pages/score-page/score-page.component';
 import { ScoresPageComponent } from './pages/scores-page/scores-page.component';
-import Consts from './consts';
+import { AboutUsComponent } from './pages/aboutus-page/aboutus.component';
 
 export const routes: Routes = [
   {
@@ -48,6 +48,11 @@ export const routes: Routes = [
   {
     path: 'invitePage/:QuizId',
     component: InviteComponent,
+    pathMatch: 'prefix'
+  },
+  {
+    path: 'aboutus',
+    component: AboutUsComponent,
     pathMatch: 'prefix'
   },
   {

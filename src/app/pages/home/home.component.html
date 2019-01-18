@@ -1,8 +1,7 @@
 <div class="container__div">
   <div class="ad_unit_1">
-    <ins class="adsbygoogle" style="display:block; width: 100px; height: 100px" data-ad-client="ca-pub-6109385373902645" data-ad-slot="3528633975"
-      data-ad-format="auto" data-full-width-responsive="true"></ins>
-
+    <ng-adsense [adClient]="'ca-pub-6109385373902645'" [adSlot]="3528633975" [display]="'inline-block'" [pageLevelAds]='true'>
+    </ng-adsense>
   </div>
   <div class="start__div" *ngIf="!isQuizStarted">
     <img class="start__div__image" src="assets/images/background.png" alt="" class="img-responsive">
@@ -36,7 +35,7 @@
     </div>
   </div>
   <div class="ad_unit_2">
-    <ins class="adsbygoogle" style="display:block; width: 100px; height: 300px;" data-ad-client="ca-pub-6109385373902645" data-ad-slot="8753040497"
-      data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <ng-adsense [adClient]="'ca-pub-6109385373902645'" [adSlot]="8753040497" [display]="'inline-block'" [pageLevelAds]='true'>
+    </ng-adsense>
   </div>
 </div>

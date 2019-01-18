@@ -9,6 +9,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { DataService } from './dataService/dataService';
 import { FacebookModule } from 'ngx-facebook';
 import { NgxGaugeModule } from 'ngx-gauge';
+import { AdsenseModule } from 'ng2-adsense';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -19,6 +20,7 @@ import { AnswerQuizComponent } from './pages/answer-quiz/answer-quiz.component';
 import { FriendPageComponent } from './pages/friend-page/friend-page.component';
 import { ScorePageComponent } from './pages/score-page/score-page.component';
 import { ScoresPageComponent } from './pages/scores-page/scores-page.component';
+import {AboutUsComponent} from './pages/aboutus-page/aboutus.component';
 import { routes } from './routes';
 
 @NgModule({
@@ -28,6 +30,7 @@ import { routes } from './routes';
     HttpClientModule,
     FormsModule,
     NgxGaugeModule,
+    AdsenseModule.forRoot(),
     FacebookModule.forRoot(),
     RouterModule.forRoot(routes),
   ],
@@ -40,7 +43,8 @@ import { routes } from './routes';
     AnswerQuizComponent,
     FriendPageComponent,
     ScorePageComponent,
-    ScoresPageComponent
+    ScoresPageComponent,
+    AboutUsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [DataService, CookieService],
