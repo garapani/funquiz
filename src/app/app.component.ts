@@ -6,16 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  showMenu = true;
-  darkModeActive: boolean;
-
-  constructor() {}
-
-  ngOnInit() {}
-
-  toggleMenu() {
-    this.showMenu = !this.showMenu;
+  ngOnInit(): void {
   }
-
-  modeToggleSwitch() {}
 }

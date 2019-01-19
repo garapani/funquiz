@@ -1,15 +1,14 @@
 <div class="root__container">
-  <!-- header -->
+  <header class="main__header">
+    <a href="/homePage">
+      <img class='main__header__logo' src=" assets/images/logo.png" />
+      <h3 class="title__text">Fun Quiz</h3>
+    </a>
+  </header>
+
   <!-- container -->
   <main class="main__container">
-    <div class="main__header">
-      <a href="/homePage">
-        <img class='main__header__logo' src=" assets/images/logo.png" />
-        <h3 class="title__text">Fun Quiz</h3>
-      </a>
-    </div>
-
-    <router-outlet class="router__outlet"></router-outlet>
-    <app-funquiz-footer class="footer"></app-funquiz-footer>
+    <router-outlet></router-outlet>
   </main>
+  <app-funquiz-footer></app-funquiz-footer>
 </div>
