@@ -21,6 +21,7 @@ import { FriendPageComponent } from './pages/friend-page/friend-page.component';
 import { ScorePageComponent } from './pages/score-page/score-page.component';
 import { ScoresPageComponent } from './pages/scores-page/scores-page.component';
 import {AboutUsComponent} from './pages/aboutus-page/aboutus.component';
+import { FooterComponent } from './viewcomponents/footer.component';
 import { routes } from './routes';
 
 @NgModule({
@@ -44,7 +45,8 @@ import { routes } from './routes';
     FriendPageComponent,
     ScorePageComponent,
     ScoresPageComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    FooterComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [DataService, CookieService],
