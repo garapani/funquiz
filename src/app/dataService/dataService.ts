@@ -389,7 +389,7 @@ export class DataService {
           attemptedQuizDetails && attemptedQuizDetails.length > 0
         )
       ) {
-        return attemptedQuizzes[0];
+        return attemptedQuizDetails[0];
       }
     }
     return null;

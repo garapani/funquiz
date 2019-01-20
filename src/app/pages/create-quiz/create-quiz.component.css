@@ -34,6 +34,7 @@ ul {
   padding: 5px;
   margin: 0px;
   border-radius: 5px;
+  -webkit-appearance:none;
 }
 
 .non_select_question {
@@ -41,6 +42,7 @@ ul {
   padding: 5px;
   margin: 0px;
   border-radius: 5px;
+  -webkit-appearance:none;
 }
 
 .question__progress__div {

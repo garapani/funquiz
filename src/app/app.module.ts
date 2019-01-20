@@ -22,6 +22,8 @@ import { ScorePageComponent } from './pages/score-page/score-page.component';
 import { ScoresPageComponent } from './pages/scores-page/scores-page.component';
 import {AboutUsComponent} from './pages/aboutus-page/aboutus.component';
 import { FooterComponent } from './viewcomponents/footer.component';
+import { PrivacyPolicyComponent } from './pages/privacypolicy-page/privacypolicy.component';
+import { FaqsComponent } from './pages/faqs-page/faqs.component';
 import { routes } from './routes';
 
 @NgModule({
@@ -46,7 +48,9 @@ import { routes } from './routes';
     ScorePageComponent,
     ScoresPageComponent,
     AboutUsComponent,
-    FooterComponent
+    FooterComponent,
+    PrivacyPolicyComponent,
+    FaqsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [DataService, CookieService],
