@@ -43,18 +43,24 @@ export class ShareQuizComponent implements OnInit {
   }
 
   ngOnInit() {
-    const initParams: InitParams = { appId: Consts.FacebookAppId, xfbml: true, version: 'v2.8' };
+    const initParams: InitParams = {
+      appId: Consts.FacebookAppId,
+      xfbml: true,
+      version: 'v2.8'
+    };
     this.fb.init(initParams);
 
     this.userId = this.activatedRoute.snapshot.params[Consts.QuizIdRouteParam];
     this.quizUrl = Consts.InviteUrl + this.userId;
     this.accessTokenCookie = this.dataService.getCurrentUSerAccessTokenFromCookie();
-    this.dataService.isUserValid(this.userId, this.accessTokenCookie).subscribe(response => {
-      const responseFromServer: boolean = response as boolean;
-      if (responseFromServer === true) {
-        this.canHideDelete = false;
-      }
-    });
+    this.dataService
+      .isUserValid(this.userId, this.accessTokenCookie)
+      .subscribe(response => {
+        const responseFromServer: boolean = response as boolean;
+        if (responseFromServer === true) {
+          this.canHideDelete = false;
+        }
+      });
 
     this.dataService
       .getUserQuizResults(this.userId)
@@ -85,7 +91,9 @@ export class ShareQuizComponent implements OnInit {
       element.setSelectionRange(0, 999999);
       document.execCommand('copy');
 
-      const copyText = document.getElementById('quiz__url__input') as HTMLInputElement;
+      const copyText = document.getElementById(
+        'quiz__url__input'
+      ) as HTMLInputElement;
       copyText.select();
       document.execCommand('copy');
 
@@ -117,7 +125,20 @@ export class ShareQuizComponent implements OnInit {
   }
 
   onShareOnWhatsapp() {
-    const whatsappUrl = 'whatsapp://send?text=' + 'How much do you know about me? Answer my FunQuiz ' + this.quizUrl;
+    let whatsappUrl: string =
+      'https://api.whatsapp.com/send?text=How much do you know about me? Answer my FunQuiz ' +
+      this.quizUrl;
+    if (this.dataService.isAndroid()) {
+      whatsappUrl =
+        'whatsapp://send?text=' +
+        'How much do you know about me? Answer my FunQuiz ' +
+        this.quizUrl;
+    } else if (this.dataService.isIOS()) {
+      whatsappUrl =
+        'https://api.whatsapp.com/send?text=How much do you know about me? Answer my FunQuiz ' +
+        this.quizUrl;
+    }
+
     this.san.bypassSecurityTrustUrl(whatsappUrl);
     window.open(whatsappUrl);
   }
@@ -125,7 +146,8 @@ export class ShareQuizComponent implements OnInit {
   onShareOnFacebook() {
     const params: UIParams = {
       href: this.quizUrl,
-      method: 'share'
+      method: 'share',
+      quote: 'How much do you know about me? Answer my FunQuiz '
     };
 
     this.fb
@@ -139,7 +161,8 @@ export class ShareQuizComponent implements OnInit {
       'fb-messenger://share/?link=' +
       this.quizUrl +
       '&app_id=' +
-      Consts.FacebookAppId;
+      Consts.FacebookAppId +
+      '&title=How much do you know about me? Answer my FunQuiz ';
     this.san.bypassSecurityTrustUrl(shareUrl);
     window.open(shareUrl);
   }

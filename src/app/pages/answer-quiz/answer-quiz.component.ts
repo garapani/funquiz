@@ -37,6 +37,7 @@ export class AnswerQuizComponent implements OnInit {
   userSelectedOptions: Array<UserQuiz>;
   score: number;
   isImageContent: boolean;
+  isAlreadyAnswered: boolean;
 
   constructor(
     private dataService: DataService,
@@ -64,6 +65,7 @@ export class AnswerQuizComponent implements OnInit {
     this.dataService.getUserQuestions(this.quizId).subscribe(questions => {
       if (questions != null) {
         const tempAllQuestions = questions as Array<UserQuestion>;
+        this.indexIterator = -1;
         tempAllQuestions.map(q => this.quizQuestions.push(q));
         this.getNextQuestion();
       }
@@ -71,11 +73,13 @@ export class AnswerQuizComponent implements OnInit {
   }
 
   getNextQuestion() {
+    this.isAlreadyAnswered = false;
+    this.changeDetectorRef.detectChanges();
     if (this.noOfSelectedQuestions === this.maxNoofQuestions) {
       this.onQuizCompleted();
       return;
     }
-    // should go to top of the page to see the question.
+    // should go to top of the page to see the next question.
     try {
       $('html, body').animate({ scrollTop: 0 }, 'fast');
     } catch (error) {
@@ -88,16 +92,17 @@ export class AnswerQuizComponent implements OnInit {
     this.applyStyle();
 
     const completedQuizzes: UserQuiz[] = this.dataService.getDetailsOfCompletedQuiz(this.quizId);
-    if (this.dataService.isDataValid(completedQuizzes)) {
+    if (this.dataService.isDataValid(completedQuizzes) && completedQuizzes.length > 0) {
       const userSelectedOptions: UserQuiz[] = completedQuizzes.filter(q => q.questionId === this.selectedQuestion.questionId);
       if (this.dataService.isDataValid(userSelectedOptions) && userSelectedOptions.length > 0) {
+        this.isAlreadyAnswered = true;
         this.onOptionSelected(userSelectedOptions[0].optionId, 1000);
       }
     }
   }
 
   onOptionSelected(userSelectedOptionId: string, timeForAnimtion: number = 1000) {
-
+    this.changeDetectorRef.detectChanges();
     this.isUserProvidedAnswer = true;
     const userQuiz = new UserQuiz();
     userQuiz.questionId = this.selectedQuestion.questionId;
@@ -220,17 +225,17 @@ export class AnswerQuizComponent implements OnInit {
     element.css('justify-content', 'center');
     element.css('align-items', 'center');
     element.css('flex-flow', 'wrap');
-    element.css('border-color', 'pink');
+    element.css('border-color', 'white');
     element.css('border-width', '0.5px');
     element.css('border-radius', '5px');
     element.css('box-shadow', 'rgba(0, 0, 255, 0.1) 0px 0px 32px 0px');
 
     element.hover(
-      function() {
+      function () {
         $(this).css('background-color', 'lightblue');
         $(this).css('cursor', 'pointer');
       },
-      function() {
+      function () {
         $(this).css('background-color', 'white');
       }
     );

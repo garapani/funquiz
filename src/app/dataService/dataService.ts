@@ -143,8 +143,13 @@ export class DataService {
 
   isUserAlreadyProvidedAnswer(quizId: string, questionId: string): boolean {
     const attemptedQuiz: AttemptedQuiz = this.getAttemptedQuizDetails(quizId);
-    if (this.isDataValid(attemptedQuiz) && this.isDataValid(attemptedQuiz.userSelected)) {
-      const userSelected: UserQuiz[] = attemptedQuiz.userSelected.filter(s => s.questionId === questionId);
+    if (
+      this.isDataValid(attemptedQuiz) &&
+      this.isDataValid(attemptedQuiz.userSelected)
+    ) {
+      const userSelected: UserQuiz[] = attemptedQuiz.userSelected.filter(
+        s => s.questionId === questionId
+      );
       if (this.isDataValid(userSelected) && userSelected.length > 0) {
         return true;
       }
@@ -154,8 +159,13 @@ export class DataService {
 
   getUserAlreadyProvidedAnswer(quizId: string, questionId: string): UserQuiz {
     const attemptedQuiz: AttemptedQuiz = this.getAttemptedQuizDetails(quizId);
-    if (this.isDataValid(attemptedQuiz) && this.isDataValid(attemptedQuiz.userSelected)) {
-      const userSelected: UserQuiz[] = attemptedQuiz.userSelected.filter(s => s.questionId === questionId);
+    if (
+      this.isDataValid(attemptedQuiz) &&
+      this.isDataValid(attemptedQuiz.userSelected)
+    ) {
+      const userSelected: UserQuiz[] = attemptedQuiz.userSelected.filter(
+        s => s.questionId === questionId
+      );
       if (this.isDataValid(userSelected) && userSelected.length > 0) {
         return userSelected[0];
       }
@@ -164,7 +174,9 @@ export class DataService {
   }
   isQuizCompleted(quizId: string): boolean {
     let quizCompleted = false;
-    const friendDetails: FriendDetails = this.getFriendDetailsFromCookie(quizId);
+    const friendDetails: FriendDetails = this.getFriendDetailsFromCookie(
+      quizId
+    );
     if (this.isDataValid(friendDetails)) {
       quizCompleted = friendDetails.quizCompleted;
     }
@@ -231,7 +243,7 @@ export class DataService {
     friendId: string,
     friendAccessToken: string,
     quizCompleted: boolean = false,
-    score: number = 0,
+    score: number = 0
   ): void {
     const friend: FriendDetails = new FriendDetails();
     const friends: FriendDetails[] = this.getAllFriendsDetailsFromCookie();
@@ -338,6 +350,21 @@ export class DataService {
     }
     return false;
   }
+
+  public isAndroid(): boolean {
+    if (navigator.userAgent.match(/Android/i)) {
+      return true;
+    }
+    return false;
+  }
+
+  public isIOS(): boolean {
+    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      return true;
+    }
+    return false;
+  }
+
   //#endregion
 
   //#region private functions
@@ -354,8 +381,14 @@ export class DataService {
       AttemptedQuiz
     > = this.getAttemptedQuizDetailsFromCookie();
     if (this.isDataValid(attemptedQuizzes)) {
-      const attemptedQuizDetails: AttemptedQuiz[] = attemptedQuizzes.filter(q => q.quizId === quizId);
-      if (this.isDataValid(attemptedQuizDetails && attemptedQuizDetails.length > 0)) {
+      const attemptedQuizDetails: AttemptedQuiz[] = attemptedQuizzes.filter(
+        q => q.quizId === quizId
+      );
+      if (
+        this.isDataValid(
+          attemptedQuizDetails && attemptedQuizDetails.length > 0
+        )
+      ) {
         return attemptedQuizzes[0];
       }
     }
@@ -376,5 +409,6 @@ export class DataService {
     }
     return null;
   }
+
   //#endregion
 }
