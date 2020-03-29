@@ -24,6 +24,8 @@ import {AboutUsComponent} from './pages/aboutus-page/aboutus.component';
 import { FooterComponent } from './viewcomponents/footer.component';
 import { PrivacyPolicyComponent } from './pages/privacypolicy-page/privacypolicy.component';
 import { FaqsComponent } from './pages/faqs-page/faqs.component';
+import {GoogleAdSenseComponent} from './google-adsense/google-adsense.component';
+
 import { routes } from './routes';
 
 @NgModule({
@@ -50,7 +52,8 @@ import { routes } from './routes';
     AboutUsComponent,
     FooterComponent,
     PrivacyPolicyComponent,
-    FaqsComponent
+    FaqsComponent,
+    GoogleAdSenseComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [DataService, CookieService],
