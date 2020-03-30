@@ -2,7 +2,12 @@ import { Component, AfterViewInit, Input } from "@angular/core";
 
 @Component({
   selector: "google-adsense",
-  templateUrl: "./google-adsense.component.html"
+  templateUrl: "./google-adsense.component.html",
+  styleUrls: [
+    './google-adsense.component.css',
+    '../global.css',
+    '../global.mobile.css'
+  ]
 })
 export class GoogleAdSenseComponent implements AfterViewInit {
   @Input() data;

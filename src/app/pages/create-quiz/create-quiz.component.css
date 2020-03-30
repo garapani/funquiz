@@ -129,3 +129,10 @@ ul {
 input {
   max-width: 250px;
 }
+
+.no-touchevents content__div:hover {
+  cursor: pointer;
+  background-color: lightblue;
+  border-width: 2px;
+  border-color: lightblue;
+}

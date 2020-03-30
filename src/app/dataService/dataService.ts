@@ -106,6 +106,11 @@ export class DataService {
     return this.http.get(Consts.GetAllQuestionsUrl, { headers: headers });
   }
 
+  deleteQuizAndCreateNewQuiz() {
+    // delete the user quiz
+    this.cookieService.delete(Consts.UserDetailsCookieName);
+  }
+  
   getUserQuestions(userId: string) {
     const headers: HttpHeaders = this.createHeader();
     return this.http.get(

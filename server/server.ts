@@ -8,11 +8,11 @@ import * as path from 'path';
 
 const options = {
   key: fs.readFileSync(
-    path.join(__dirname, './public/certificates/funquiz_in_privatekey.key'),
+    path.join(__dirname, './public/certificates/key.pem'),
     'utf8'
   ),
   cert: fs.readFileSync(
-    path.join(__dirname, './public/certificates/funquiz_in_certificate.crt'),
+    path.join(__dirname, './public/certificates/server.crt'),
     'utf8'
   )
 };

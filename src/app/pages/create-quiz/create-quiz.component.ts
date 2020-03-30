@@ -82,7 +82,6 @@ export class CreateQuizComponent implements OnInit {
     }
 
     this.selectedQuestion = null;
-    this.changeDetectorRef.detectChanges();
     // tslint:disable-next-line:forin
     for (const index in this.allQuestions) {
       const indexNum = +index;
@@ -94,6 +93,7 @@ export class CreateQuizComponent implements OnInit {
         this.selectedQuestion = this.allQuestions[indexNum];
         this.isImageContent = this.selectedQuestion.optionsType === 'i_s';
         this.indexIterator = indexNum + 1;
+        this.changeDetectorRef.detectChanges();
         return true;
       }
     }
@@ -128,5 +128,34 @@ export class CreateQuizComponent implements OnInit {
         this.router.navigate([Consts.ShareQuizPagePath, { QuizId: this.userId }]);
       }
     });
+  }
+
+  applyStyle() {
+    $('.content__div').each((i) => {
+      this.applyCSS($(this), 'white');
+    });
+  }
+
+  applyCSS(element, color: string) {
+    element.css('background-color', color);
+    element.css('margin', '10px');
+    element.css('display', 'flex');
+    element.css('justify-content', 'center');
+    element.css('align-items', 'center');
+    element.css('flex-flow', 'wrap');
+    element.css('border-color', 'white');
+    element.css('border-width', '0.5px');
+    element.css('border-radius', '5px');
+    element.css('box-shadow', 'rgba(0, 0, 255, 0.1) 0px 0px 32px 0px');
+
+    element.hover(
+      function () {
+        $(this).css('background-color', 'lightblue');
+        $(this).css('cursor', 'pointer');
+      },
+      function () {
+        $(this).css('background-color', 'white');
+      }
+    );
   }
 }

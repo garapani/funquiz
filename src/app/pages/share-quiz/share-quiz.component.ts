@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
   FacebookService,
   UIParams,
@@ -35,7 +35,8 @@ export class ShareQuizComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private dataService: DataService,
     private fb: FacebookService,
-    private san: DomSanitizer
+    private san: DomSanitizer,
+    private router: Router
   ) {
     this.noOneAnswered = true;
     this.friendsResults = new Array<FriendQuizResult>();
@@ -104,6 +105,11 @@ export class ShareQuizComponent implements OnInit {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  onDeleteAndCreateNewQuiz() {
+    this.dataService.deleteQuizAndCreateNewQuiz();
+    this.router.navigate([Consts.HomePagePath]);
   }
 
   onDelete(result: FriendQuizResult) {
