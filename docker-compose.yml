@@ -8,9 +8,9 @@ services:
     volumes:
     - data-volume:/data/db
   funquiz:
-    image: vgarapani/funquiz_server
+    image: vgarapani/funquiz_server:2.0
     ports:
-      - "80:8080"
+      - "80:8000"
       - "443:8080"
     deploy:
       replicas: 2

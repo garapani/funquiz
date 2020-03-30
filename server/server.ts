@@ -8,14 +8,25 @@ import * as path from 'path';
 
 const options = {
   key: fs.readFileSync(
-    path.join(__dirname, './public/certificates/key.pem'),
+    path.join(__dirname, './public/certificates/funquiz_in.key'),
     'utf8'
   ),
   cert: fs.readFileSync(
-    path.join(__dirname, './public/certificates/server.crt'),
+    path.join(__dirname, './public/certificates/funquiz_in.crt'),
     'utf8'
+  ),
+  ca: fs.readFileSync(
+    path.join(__dirname, './public/certificates/funquiz_in.ca-bundle')
   )
 };
+
+const hostname = 'funquiz.in';
+const httpServer = http.createServer((req, res) => {
+  res.statusCode = 301;
+  res.setHeader('Location', `https://${hostname}${req.url}`);
+  res.end(); // make sure to call send() or end() to send the response
+});
+httpServer.listen(8000);
 
 // const server = http.createServer(app);
 const serverSSL = https.createServer(options, app);
@@ -23,7 +34,7 @@ const serverSSL = https.createServer(options, app);
 // server.listen(80);
 // server.on('error', (error) => console.error(error));
 // server.on('listening', () => console.log('listening'));
-app.listen(8000);
+// app.listen(8000);
 
 serverSSL.listen(8080);
 serverSSL.on('error', (error) => console.error(error));
