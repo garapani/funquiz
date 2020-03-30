@@ -8,15 +8,15 @@ import * as path from 'path';
 
 const options = {
   key: fs.readFileSync(
-    path.join(__dirname, './public/certificates/funquiz_in.key'),
+    path.join(__dirname, './public/certificates/funquiz_in_new.key'),
     'utf8'
   ),
   cert: fs.readFileSync(
-    path.join(__dirname, './public/certificates/funquiz_in.crt'),
+    path.join(__dirname, './public/certificates/funquiz_in_new.crt'),
     'utf8'
   ),
   ca: fs.readFileSync(
-    path.join(__dirname, './public/certificates/funquiz_in.ca-bundle')
+    path.join(__dirname, './public/certificates/funquiz_in_new.ca-bundle')
   )
 };
 
