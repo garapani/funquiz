@@ -9,8 +9,8 @@ RUN echo 'setting working directory'
 WORKDIR /funquiz-app
 RUN echo 'copying remaining files'
 COPY . .
-RUN echo 'exposing 8000,8080 port'
-EXPOSE 8080
+RUN echo 'exposing 8000,4000 port'
+EXPOSE 4000
 EXPOSE 8000
 
 RUN echo 'compiling angular project'

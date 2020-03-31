@@ -28,23 +28,8 @@ const httpServer = http.createServer((req, res) => {
 });
 httpServer.listen(8000);
 
-// const server = http.createServer(app);
 const serverSSL = https.createServer(options, app);
 
-// server.listen(80);
-// server.on('error', (error) => console.error(error));
-// server.on('listening', () => console.log('listening'));
-// app.listen(8000);
-
-serverSSL.listen(8080);
+serverSSL.listen(PORT);
 serverSSL.on('error', (error) => console.error(error));
 serverSSL.on('listening', () => console.log('listening'));
-
-// app.listen(PORT, err => {
-//   const appLogger: AppLogger = new AppLogger('Server');
-//   if (err) { appLogger.writeLog(LogLevel.debug, err); }
-//   appLogger.writeLog(
-//     LogLevel.debug,
-//     'Express server listening on port ' + PORT
-//   );
-// });
