@@ -1,10 +1,18 @@
-<div class="score__div">
-  <h3>Congrats</h3>
-  <h4>your score: {{score}}/10</h4>
-  <ngx-gauge class="gauage" [thresholds]="thresholdConfig" [type]="gaugeType" [value]="gaugeValue" [label]="gaugeLabel" [append]="gaugeAppendText" [thick]="20">
-  </ngx-gauge>
-  <div class="share__info" >Now, it’s your turn. Create your own fun quiz and send to your friends!</div>
-  
-    <button type="button" class="btn" (click)="onCreateQuiz()">Create your fun quiz</button>
-  <button type="button" class="btn" (click)="onShowOtherScores()">Show others score</button>
+<div class="container-fluid row col-12 justify-content-center" style="margin: 0px;">
+  <app-google-adsense class="col-lg-3 col-xs-1 ad_1" [data]="3528633975"></app-google-adsense>
+  <div class="col-lg-6 col-xs-2 container-fluid row score__div text-center">
+    <h3>Congrats</h3>
+    <h4>your score: {{score}}/10</h4>
+    <ngx-gauge class="gauage" [thresholds]="thresholdConfig" [type]="gaugeType" [value]="gaugeValue"
+      [label]="gaugeLabel" [append]="gaugeAppendText" [thick]="20">
+    </ngx-gauge>
+    <div class="share__info">Now, it’s your turn. Create your own fun quiz and send to your friends!</div>
+    <div class="text-center">
+      <button type="button" class="btn" (click)="onCreateQuiz()">Create your fun quiz</button>
+    </div>
+    <div class="text-center">
+      <button type="button" class="btn" (click)="onShowOtherScores()">Show others score</button>
+    </div>
+  </div>
+  <app-google-adsense class="col-lg-3 col-xs-2" [data]="8753040497"></app-google-adsense>
 </div>

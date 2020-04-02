@@ -1,31 +1,23 @@
 .share__quiz__div {
-  display: flex;
   justify-content: center;
   align-content: center;
-  flex-flow: column;
   align-items: center;
-  margin: 3% 30%;
   background-color: #fafafa;
   border: solid;
   background-color: white;
   border-color: pink;
   border-width: 0.5px;
-  padding: 10px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
 }
 
 .share__quiz__div_child {
-  display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: column;
   align-items: center;
   width: 100%;
-  margin: 3% 30%;
-  background-color: #fafafa;
   background-color: white;
-  padding: 10px;
 }
 
 .score__div {
@@ -216,4 +208,8 @@ th {
 
 .tooltipText {
   text-align: center;
+}
+
+.ad_unit_1{
+  max-height: 150px;
 }

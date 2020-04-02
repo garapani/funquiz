@@ -1,16 +1,14 @@
 .answerQuiz__div {
-  display: flex;
   justify-content: center;
-  flex-flow: column;
   align-items: center;
-  margin: 3% 30%;
   background-color: #fafafa;
   border: solid;
   background-color: white;
   border-color: pink;
   border-width: 0.5px;
-  padding: 10px;
+  padding:15px;
   border-radius: 15px;
+  min-height: 500px;
   box-shadow: rgba(0, 0, 255, 0.1) 0px 0px 32px 0px;
 }
 

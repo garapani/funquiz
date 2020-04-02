@@ -1,10 +1,12 @@
-<div class="container__div">
-  <app-google-adsense class="ad_unit_1" [data]="3528633975"></app-google-adsense>
-  <div class="start__div" *ngIf="!isQuizStarted">
-    <img class="start__div__image" src="assets/images/background.png" alt="" class="img-responsive">
-    <button type="button" class="btn icon-arrow-right" (click)="onStart()">Start</button>
+<div class="container-fluid row col-12" style="margin: 0px;">
+  <app-google-adsense class="col-3" [data]="3528633975"></app-google-adsense>
+  <div class="col-6 justify-content-center" *ngIf="!isQuizStarted">
+    <img class="justify-content-center" src="assets/images/background.png" alt="" class="img-responsive">
+    <div class="text-center">
+      <button type="button" class="btn" (click)="onStart()">Start</button>
+    </div>
   </div>
-  <div class="userdetails__div" *ngIf="isQuizStarted">
+  <div class="col-6 row userdetails__div" *ngIf="isQuizStarted">
     <h3>Create your fun quiz</h3>
     <form class="userdetails__form">
       <h3>Please enter your name</h3>
@@ -15,7 +17,8 @@
       </div>
       <input type="text" id="name" name="name" class="form-control userName" autocomplete="off" [(ngModel)]="userName"
         #name="ngModel" required minlength="3" placeholder="Enter your name" />
-      <button type="button" class="btn create__quiz__button" [disabled]="userName === 'null' || userName === undefined || userName.length <3 || userName.length >20"
+      <button type="button" class="btn create__quiz__button"
+        [disabled]="userName === 'null' || userName === undefined || userName.length <3 || userName.length >20"
         (click)="onCreateQuiz()">Create Quiz</button>
     </form>
     <div class="instructions__div">
@@ -31,5 +34,5 @@
       </ul>
     </div>
   </div>
-    <app-google-adsense class="ad_unit_2" [data]="8753040497"></app-google-adsense>
+  <app-google-adsense class="col-3" [data]="8753040497"></app-google-adsense>
 </div>

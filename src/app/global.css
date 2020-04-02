@@ -7,8 +7,6 @@
   background: rebeccapurple;
   cursor: pointer;
   padding: 10px 20px;
-  display: flex;
-  flex-flow: row;
   align-content: center;
   justify-content: center;
   margin: 5px 10px;
