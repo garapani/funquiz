@@ -1,6 +1,7 @@
 <div class="container row col-12 justify-content-center" style="margin: 0px;">
-  <app-google-adsense class="col-3" [data]="3528633975"></app-google-adsense>
-  <div class=" col-6 share__quiz__div">
+  <app-google-adsense class="col-lg-3 col-xs-3 ad_unit_1" [data]="adSlotId" [dataAdFormat]="dataAdFormat"
+    [dataFullWidthResponsive]="dataFullWidthResponsive"></app-google-adsense>
+  <div class=" col-lg-6 col-xs-3 justify-content-center share__quiz__div">
     <div *ngIf="noOneAnswered === true" class="share__quiz__div_child">
       <h3 class="quiz__ready__text">your fun quiz is ready.</h3>
       <div class="quiz__share__text">
@@ -88,5 +89,5 @@
       </div>
     </div>
   </div>
-  <app-google-adsense class="col-3" [data]="8753040497"></app-google-adsense>
+  <app-google-adsense class="col-lg-3 col-xs-3" [data]="8753040497"></app-google-adsense>
 </div>

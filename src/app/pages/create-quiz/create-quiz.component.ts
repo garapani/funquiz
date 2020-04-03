@@ -6,6 +6,7 @@ import Consts from '../../consts';
 import Question from '../../model/question';
 import AllQuestions from '../../model/allQuestions';
 import UserQuiz from '../../model/userQuiz';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-createquiz',
@@ -30,11 +31,16 @@ export class CreateQuizComponent implements OnInit {
   questionsList: Array<boolean>;
   accessToken: string;
 
+  adSlotId: string;
+  dataFullWidthResponsive: boolean;
+  dataAdFormat: boolean;
+
   constructor(
     private dataService: DataService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private changeDetectorRef: ChangeDetectorRef
+    private changeDetectorRef: ChangeDetectorRef,
+    private deviceService: DeviceDetectorService
   ) {
     console.log('constructor of createQuiz');
     this.allQuestions = new Array<Question>();
@@ -49,6 +55,14 @@ export class CreateQuizComponent implements OnInit {
 
   ngOnInit() {
     console.log('ngOnInit of createQuizComponent');
+    const isMobile = this.deviceService.isMobile();
+    const isTablet = this.deviceService.isTablet();
+    if (isMobile || isTablet) {
+      this.adSlotId = '3528633975';
+      this.dataAdFormat = false;
+      this.dataFullWidthResponsive = false;
+    }
+
     const cookieUserId = this.dataService.getCurrentUserIdFromCookie();
     console.log(cookieUserId);
     if (cookieUserId !== null && cookieUserId !== '' && cookieUserId !== undefined) {

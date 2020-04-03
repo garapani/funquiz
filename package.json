@@ -51,6 +51,7 @@
     "morgan": "1.9.1",
     "ng2-adsense": "^5.4.0",
     "ngx-cookie-service": "1.0.10",
+    "ngx-device-detector": "^1.4.1",
     "ngx-facebook": "2.4.0",
     "ngx-gauge": "1.0.0-beta.4",
     "nodemon": "1.18.9",

@@ -25,6 +25,7 @@ import { FooterComponent } from './viewcomponents/footer.component';
 import { PrivacyPolicyComponent } from './pages/privacypolicy-page/privacypolicy.component';
 import { FaqsComponent } from './pages/faqs-page/faqs.component';
 import {GoogleAdSenseComponent} from './google-adsense/google-adsense.component';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 import { routes } from './routes';
 
@@ -38,6 +39,7 @@ import { routes } from './routes';
     AdsenseModule.forRoot(),
     FacebookModule.forRoot(),
     RouterModule.forRoot(routes),
+    DeviceDetectorModule.forRoot()
   ],
   declarations: [
     AppComponent,

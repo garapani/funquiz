@@ -11,6 +11,9 @@ import { Component, AfterViewInit, Input } from '@angular/core';
 })
 export class GoogleAdSenseComponent implements AfterViewInit {
   @Input() data;
+  @Input() dataAdFormat = true;
+  @Input() dataFullWidthResponsive = true;
+
   constructor() {}
   ngAfterViewInit() {
     setTimeout(() => {

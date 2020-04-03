@@ -3,6 +3,10 @@
     margin: 10px;
 }
 
-ul{
+ul {
     margin: 5px;
+}
+
+.ad_unit_1 {
+    height: 100px !important;
 }

@@ -1,8 +1,6 @@
 @media only screen and (max-width: 600px) {
   .score__div {
     width: 100%;
-    justify-content: center;
-    align-items: center;
     background-color: #fafafa;
     border: solid;
     background-color: white;

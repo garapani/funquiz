@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import {
   FacebookService,
   UIParams,
@@ -11,6 +12,7 @@ import Consts from '../../consts';
 import { DataService } from '../../dataService/dataService';
 import QuizResult from '../../model/quizResult';
 import FriendQuizResult from '../../model/friendQuizResult';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-share-quiz',
@@ -31,12 +33,17 @@ export class ShareQuizComponent implements OnInit {
   canHideDelete: boolean;
   accessTokenCookie: string;
 
+  adSlotId: string;
+  dataFullWidthResponsive: boolean;
+  dataAdFormat: boolean;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private dataService: DataService,
     private fb: FacebookService,
     private san: DomSanitizer,
-    private router: Router
+    private router: Router,
+    private deviceService: DeviceDetectorService
   ) {
     this.noOneAnswered = true;
     this.friendsResults = new Array<FriendQuizResult>();
@@ -44,6 +51,13 @@ export class ShareQuizComponent implements OnInit {
   }
 
   ngOnInit() {
+    const isMobile = this.deviceService.isMobile();
+    const isTablet = this.deviceService.isTablet();
+    if (isMobile || isTablet) {
+      this.adSlotId = '3528633975';
+      this.dataAdFormat = false;
+      this.dataFullWidthResponsive = false;
+    }
     const initParams: InitParams = {
       appId: Consts.FacebookAppId,
       xfbml: true,

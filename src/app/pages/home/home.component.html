@@ -1,12 +1,13 @@
-<div class="container-fluid row col-12" style="margin: 0px;">
-  <app-google-adsense class="col-3" [data]="3528633975"></app-google-adsense>
-  <div class="col-6 justify-content-center" *ngIf="!isQuizStarted">
+<div class="container-fluid justify-content-center" style="margin: 0px;">
+  <app-google-adsense class="col-lg-3 col-xs-3 ad_unit_1" [data]="adSlotId" [dataAdFormat]="dataAdFormat"
+    [dataFullWidthResponsive]="dataFullWidthResponsive"></app-google-adsense>
+  <div class="col-lg-6 col-xs-6 justify-content-center" *ngIf="!isQuizStarted">
     <img class="justify-content-center" src="assets/images/background.png" alt="" class="img-responsive">
     <div class="text-center">
       <button type="button" class="btn" (click)="onStart()">Start</button>
     </div>
   </div>
-  <div class="col-6 row userdetails__div" *ngIf="isQuizStarted">
+  <div class="col-lg-6 col-xs-6 justify-content-center userdetails__div" *ngIf="isQuizStarted">
     <h3>Create your fun quiz</h3>
     <form class="userdetails__form">
       <h3>Please enter your name</h3>
@@ -34,5 +35,5 @@
       </ul>
     </div>
   </div>
-  <app-google-adsense class="col-3" [data]="8753040497"></app-google-adsense>
+  <app-google-adsense class="col-lg-3 col-xs-3 ad_unit_2" [data]="8753040497"></app-google-adsense>
 </div>

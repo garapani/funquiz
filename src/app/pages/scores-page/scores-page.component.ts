@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../../dataService/dataService';
+import { DataService } from '../../dataService/dataService';
 import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
 import QuizResult from '../../model/quizResult';
 import FriendQuizResult from '../../model/friendQuizResult';
 import Consts from '../../consts';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-scores-page',
@@ -20,15 +21,27 @@ export class ScoresPageComponent implements OnInit {
   quizName: string;
   friendsResults: Array<FriendQuizResult>;
 
+  adSlotId: string;
+  dataFullWidthResponsive: boolean;
+  dataAdFormat: boolean;
+
   constructor(
     private dataService: DataService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private deviceService: DeviceDetectorService
   ) {
     this.friendsResults = new Array<FriendQuizResult>();
   }
 
   ngOnInit() {
+    const isMobile = this.deviceService.isMobile();
+    const isTablet = this.deviceService.isTablet();
+    if (isMobile || isTablet) {
+      this.adSlotId = '3528633975';
+      this.dataAdFormat = false;
+      this.dataFullWidthResponsive = false;
+    }
     this.quizId = this.activatedRoute.snapshot.params['quizId'];
     this.dataService.getUserQuizResults(this.quizId).subscribe(result => {
       console.log(result);

@@ -34,10 +34,12 @@
 }
 
 .userdetails__div {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width:100%;
+  height: 100%;
   border: solid;
   background-color: white;
   border-color: pink;
@@ -81,4 +83,8 @@
 
 .main__footer {
   margin-top: auto;
+}
+
+.ad_unit_1 {
+  height: 100px !important;
 }

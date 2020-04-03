@@ -10,6 +10,7 @@ import Option from '../../model/option';
 import UserQuestion from '../../model/userQuestion';
 import { DataService } from '../../dataService/dataService';
 import UserQuiz from '../../model/userQuiz';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-answer-quiz',
@@ -39,11 +40,16 @@ export class AnswerQuizComponent implements OnInit {
   isImageContent: boolean;
   isAlreadyAnswered: boolean;
 
+  adSlotId: string;
+  dataFullWidthResponsive: boolean;
+  dataAdFormat: boolean;
+
   constructor(
     private dataService: DataService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private changeDetectorRef: ChangeDetectorRef
+    private changeDetectorRef: ChangeDetectorRef,
+    private deviceService: DeviceDetectorService
   ) {
     this.quizQuestions = new Array<UserQuestion>();
     this.selectedQuestion = new UserQuestion();
@@ -57,6 +63,14 @@ export class AnswerQuizComponent implements OnInit {
   }
 
   ngOnInit() {
+    const isMobile = this.deviceService.isMobile();
+    const isTablet = this.deviceService.isTablet();
+    if (isMobile || isTablet) {
+      this.adSlotId = '3528633975';
+      this.dataAdFormat = false;
+      this.dataFullWidthResponsive = false;
+    }
+    
     this.quizId = this.activatedRoute.snapshot.params[Consts.QuizIdRouteParam];
     this.friendId = this.activatedRoute.snapshot.params[Consts.FriendIdRouteParam];
     this.friendAccessToken = this.activatedRoute.snapshot.params[

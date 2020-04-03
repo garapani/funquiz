@@ -3,6 +3,7 @@ import Consts from '../../consts';
 import { DataService } from '../../dataService/dataService';
 import { Router } from '@angular/router';
 import RegisterUser from '../../model/registerUser';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-home',
@@ -18,10 +19,21 @@ import RegisterUser from '../../model/registerUser';
 export class HomeComponent implements OnInit {
   userName: string;
   isQuizStarted: boolean;
+  
+  adSlotId: string;
+  dataFullWidthResponsive: boolean;
+  dataAdFormat: boolean;
 
-  constructor(private dataService: DataService, private router: Router) {}
+  constructor(private dataService: DataService, private router: Router, private deviceService: DeviceDetectorService) {}
 
   ngOnInit() {
+    const isMobile = this.deviceService.isMobile();
+    const isTablet = this.deviceService.isTablet();
+    if (isMobile || isTablet) {
+      this.adSlotId = '3528633975';
+      this.dataAdFormat = false;
+      this.dataFullWidthResponsive = false;
+    }
     const userId = this.dataService.getCurrentUserIdFromCookie();
     console.log(userId);
     if (this.dataService.isDataValid(userId)) {

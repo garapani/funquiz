@@ -24,3 +24,7 @@
     color: aqua;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+
+.ad_unit_1 {
+    height: 100px !important;
+  }

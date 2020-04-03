@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
 import Consts from '../../consts';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 
 @Component({
@@ -23,13 +24,25 @@ export class ScorePageComponent implements OnInit {
     '50': { color: 'orange' },
     '75.5': { color: 'green' }
   };
+  adSlotId: string;
+  dataFullWidthResponsive: boolean;
+  dataAdFormat: boolean;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private deviceService: DeviceDetectorService
   ) { }
 
   ngOnInit() {
+    const isMobile = this.deviceService.isMobile();
+    const isTablet = this.deviceService.isTablet();
+    if (isMobile || isTablet) {
+      this.adSlotId = '3528633975';
+      this.dataAdFormat = false;
+      this.dataFullWidthResponsive = false;
+    }
+    
     this.friendId = this.activatedRoute.snapshot.params['friendId'];
     this.quizId = this.activatedRoute.snapshot.params['quizId'];
     this.score = this.activatedRoute.snapshot.params['score'];

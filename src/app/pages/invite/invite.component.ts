@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import Consts from '../../consts';
 import { DataService } from '../../dataService/dataService';
 import FriendDetails from '../../model/cookies/friendsDetails';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-invite',
@@ -11,13 +12,27 @@ import FriendDetails from '../../model/cookies/friendsDetails';
 })
 export class InviteComponent implements OnInit {
   quizId: string;
+
+  adSlotId: string;
+  dataFullWidthResponsive: boolean;
+  dataAdFormat: boolean;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private dataService: DataService
+    private dataService: DataService,
+    private deviceService: DeviceDetectorService
   ) { }
 
   ngOnInit() {
+    const isMobile = this.deviceService.isMobile();
+    const isTablet = this.deviceService.isTablet();
+    if (isMobile || isTablet) {
+      this.adSlotId = '3528633975';
+      this.dataAdFormat = false;
+      this.dataFullWidthResponsive = false;
+    }
+
     this.quizId = this.activatedRoute.snapshot.params[Consts.QuizIdRouteParam];
     const localQuizId: string = this.dataService.getCurrentUserIdFromCookie();
     console.log(localQuizId);

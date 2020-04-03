@@ -5,6 +5,7 @@ import Consts from '../../consts';
 import QuizResult from '../../model/quizResult';
 import Friend from '../../model/friend';
 import FriendDetails from '../../model/cookies/friendsDetails';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-friend-page',
@@ -22,15 +23,29 @@ export class FriendPageComponent implements OnInit {
   friendName: string;
   quizResults: Array<QuizResult>;
 
+  adSlotId: string;
+  dataFullWidthResponsive: boolean;
+  dataAdFormat: boolean;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private dataService: DataService,
-    private router: Router
+    private router: Router,
+    private deviceService: DeviceDetectorService
   ) {
     this.quizResults = new Array<QuizResult>();
   }
 
   ngOnInit() {
+    console.log('ngOnInit of friend page component');
+    const isMobile = this.deviceService.isMobile();
+    const isTablet = this.deviceService.isTablet();
+    if (isMobile || isTablet) {
+      this.adSlotId = '3528633975';
+      this.dataAdFormat = false;
+      this.dataFullWidthResponsive = false;
+    }
+
     this.quizId = this.activatedRoute.snapshot.params[Consts.QuizIdRouteParam];
     const isQuizInProgress: boolean = this.dataService.isQuizInProgress(this.quizId);
     const friendDetails: FriendDetails = this.dataService.getFriendDetailsFromCookie(this.quizId);
