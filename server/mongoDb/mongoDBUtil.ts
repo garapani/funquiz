@@ -10,7 +10,7 @@ class MongoDBUtil {
     } else {
       connectionString = constants.MONGO_DB_DEV_CONNECTION_STRING;
     }
-    connectionString = constants.MONGO_DB_PROD_CONNECTION_STRING;
+    console.log(connectionString);
     const result: Mongoose = await connect(
       connectionString,
       {
@@ -18,7 +18,7 @@ class MongoDBUtil {
         useNewUrlParser: true
       }
     );
-    console.log(result);
+    console.log(`mongo db connect result: ${result}`);
   }
 }
 export default new MongoDBUtil();

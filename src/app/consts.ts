@@ -40,16 +40,16 @@ export default class Consts {
   public static ScoresPagePath = 'scoresPage';
 
   private static GetServerUrl(): string {
-    return 'https://funquiz.in';
+    return 'http://localhost:4010'
     if (environment.production) {
       return 'http://funquiz.in';
     } else {
-      return 'http://localhost:4000';
+      return 'http://localhost:4010';
     }
   }
 
   private static GetHostUrl(): string {
-    return 'https://funquiz.in';
+    return 'http://localhost:80';
     if (environment.production) {
       return 'http://funquiz.in';
     } else {

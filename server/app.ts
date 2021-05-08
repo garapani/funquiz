@@ -57,7 +57,7 @@ class App {
     // support application/x-www-form-urlencoded post data
     this.app.use(urlencoded({ extended: true }));
     this.app.use(cookieParser());
-    this.app.use(forceSSL);
+    // this.app.use(forceSSL);
     this.app.use(compress());
     this.app.use(methodOverride());
     this.app.use(helmet());

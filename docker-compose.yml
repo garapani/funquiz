@@ -11,7 +11,7 @@ services:
     image: vgarapani/funquiz_server:6.0
     ports:
       - "80:8000"
-      - "443:4000"
+      - "443:4010"
     deploy:
       replicas: 2
       update_config:
