@@ -9,6 +9,7 @@ import * as path from 'path';
 console.log(`app is listening on port:${PORT}`);
 app.listen(PORT);
 
+/****code to support HTTPS and production */
 /*
 const options = {
   key: fs.readFileSync(
